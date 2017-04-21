@@ -40,7 +40,6 @@ $ sudo apt-get install build-essential git nodejs
 $ sudo apt-get install libsqlite3-dev libxslt1-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev
 $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-$ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc{% endhighlight %}
 
@@ -53,8 +52,7 @@ $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc{% endhighlight %}
 $ rbenv install 2.4.1
 $ rbenv global 2.4.1
 $ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-$ gem update --system
-$ gem install rails --pre
+$ gem install rails
 $ gem install sqlite3{% endhighlight %}
       </div>
 
@@ -63,8 +61,7 @@ $ gem install sqlite3{% endhighlight %}
 $ sudo apt-get install build-essential nodejs
 $ sudo apt-get install ruby ruby-dev
 $ sudo apt-get install libsqlite3-dev libxslt1-dev libxml2-dev libyaml-dev
-$ sudo gem update --system
-$ sudo gem install rails --pre
+$ sudo gem install rails
 $ sudo gem install sqlite3{% endhighlight %}
     </div>
   </div>
@@ -95,7 +92,6 @@ $ sudo pacman -S base-devel nodejs git
 $ sudo pacman -S libxslt libxml2 libyaml openssl readline zlib
 $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-$ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc{% endhighlight %}
 
@@ -108,8 +104,7 @@ $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc{% endhighlight %}
 $ rbenv install 2.4.1
 $ rbenv global 2.4.1
 $ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-$ gem update --system
-$ gem install rails --pre
+$ gem install rails
 $ gem install sqlite3{% endhighlight %}
       </div>
 
@@ -119,8 +114,7 @@ $ gem install sqlite3{% endhighlight %}
 $ sudo pacman -S base-devel nodejs
 $ sudo pacman -S ruby
 $ sudo pacman -S libxslt libxml2 libyaml
-$ sudo gem update --system
-$ sudo gem install rails --pre
+$ sudo gem install rails
 $ sudo gem install sqlite3{% endhighlight %}
       </div>
     </div>
