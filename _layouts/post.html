@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="row">
+  <div class="col-md-2 visible-lg visible-md" data-spy-target>
+    <ul class="nav nav-pills nav-stacked affix">
+      {% for section in page.sections %}
+        {% if forloop.first %}
+        <li class="active">{% else %}<li>
+        {% endif %}
+          <a href="#{{ section[0] }}">{{ section[1] }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <h2>{{ page.title }}</h2>
+
+    <article>
+      {{ content }}
+    </article>
+  </div>
+</div>

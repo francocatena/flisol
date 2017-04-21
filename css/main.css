@@ -1,0 +1,20 @@
+body {
+  padding-top: 70px;
+}
+
+img.fmogh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index: 1031;
+}
+
+.section-anchor {
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+.tab-pane.active {
+  padding-top: 1em;
+}

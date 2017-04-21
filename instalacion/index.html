@@ -1,0 +1,158 @@
+---
+layout: default
+title: Instalación
+---
+
+<div class="row">
+  <div class="col-md-2 visible-lg visible-md">
+    <div data-spy="affix" data-spy-target>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#ubuntu">Ubuntu</a></li>
+        <li><a href="#archlinux">Archlinux</a></li>
+        <li><a href="#windows">Windows</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-10">
+    <div class="page-header">
+      <h3 class="section-anchor" id="ubuntu">Ubuntu</h3>
+    </div>
+
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#ubuntu-rbenv" data-toggle="tab">
+            <span class="glyphicon glyphicon-thumbs-up"></span>
+            Pelo en pecho edition
+        </a>
+      </li>
+      <li>
+        <a href="#ubuntu-apt-get" data-toggle="tab">
+          Puro <kbd>apt-get</kbd>
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active fade in" id="ubuntu-rbenv">
+        {% highlight console %}
+$ sudo apt-get install build-essential git nodejs
+$ sudo apt-get install libsqlite3-dev libxslt1-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev
+$ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+$ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+$ echo 'eval "$(rbenv init -)"' >> ~/.bashrc{% endhighlight %}
+
+        <p>
+          Cerrar el terminal y abrirlo nuevamente (para que se ejecute lo que agregamos
+          en <code>.bashrc</code>)
+        </p>
+
+        {% highlight console %}
+$ rbenv install 2.4.1
+$ rbenv global 2.4.1
+$ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+$ gem update --system
+$ gem install rails --pre
+$ gem install sqlite3{% endhighlight %}
+      </div>
+
+    <div class="tab-pane fade" id="ubuntu-apt-get">
+      {% highlight console %}
+$ sudo apt-get install build-essential nodejs
+$ sudo apt-get install ruby2.0 ruby2.0-dev
+$ sudo apt-get install libsqlite3-dev libxslt1-dev libxml2-dev libyaml-dev
+$ sudo gem update --system
+$ sudo gem install rails --pre
+$ sudo gem install sqlite3{% endhighlight %}
+    </div>
+  </div>
+
+    <div class="page-header">
+      <h3 class="section-anchor" id="archlinux">Archlinux</h3>
+    </div>
+
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#archlinux-rbenv" data-toggle="tab">
+            <span class="glyphicon glyphicon-thumbs-up"></span>
+            Pelo en pecho edition
+        </a>
+      </li>
+      <li>
+        <a href="#archlinux-pacman" data-toggle="tab">
+          Puro <kbd>pacman</kbd>
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active fade in" id="archlinux-rbenv">
+
+        {% highlight console %}
+$ sudo pacman -S base-devel nodejs git
+$ sudo pacman -S libxslt libxml2 libyaml openssl readline zlib
+$ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+$ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+$ echo 'eval "$(rbenv init -)"' >> ~/.bashrc{% endhighlight %}
+
+        <p>
+          Cerrar el terminal y abrirlo nuevamente (para que se ejecute lo que agregamos
+          en <code>.bashrc</code>)
+        </p>
+
+        {% highlight console %}
+$ rbenv install 2.4.1
+$ rbenv global 2.4.1
+$ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+$ gem update --system
+$ gem install rails --pre
+$ gem install sqlite3{% endhighlight %}
+      </div>
+
+      <div class="tab-pane fade" id="archlinux-pacman">
+
+        {% highlight console %}
+$ sudo pacman -S base-devel nodejs
+$ sudo pacman -S ruby
+$ sudo pacman -S libxslt libxml2 libyaml
+$ sudo gem update --system
+$ sudo gem install rails --pre
+$ sudo gem install sqlite3{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="page-header">
+      <h3 class="section-anchor" id="windows">Windows</h3>
+    </div>
+
+    <p>
+      ¿De verdad? OK
+    </p>
+
+    <p>
+      Descargá el instalador (Ruby 2.3.3 y Rails 5.0)
+      desde <a href="http://railsinstaller.org/">http://railsinstaller.org/</a>
+      o directamente desde
+      <a href="https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.3.0.exe">
+        acá
+      </a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="alert alert-warning">
+  <strong>¿Detrás de un proxy?</strong>
+  <kbd>export http_proxy=http://X.X.X.X:YYYY/</kbd> para Linux y OSX
+</div>
+
+
+<p class="lead">
+  También podés ver y comentar la versión fácil en forma de scripts en:
+  <a href="https://gist.github.com/francocatena/9926690">https://gist.github.com/francocatena/9926690</a>
+</p>
